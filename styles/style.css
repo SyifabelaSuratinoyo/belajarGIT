@@ -12,7 +12,7 @@ body {
 
 .wrapper {
     width: 100%;
-    max-width: 1350px;
+    max-width: 1300px;
     margin: auto;
     position: relative;
 }
@@ -23,6 +23,7 @@ body {
     float: left;
     font-family: courier;
     color: #D25380;
+    margin-top: 15px;
 }
 
 .logo img {
@@ -32,6 +33,7 @@ body {
 
 .menu {
     float: right;
+    margin-top: 20px;
 }
 
 nav {
@@ -57,7 +59,7 @@ nav ul{
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 35px 30px;
+    margin: 15px 15px;
 }
 
 nav ul li a {
@@ -100,18 +102,17 @@ span{
 }
 
 .images{
-    width: 35%;
-    height: 90%;
+    width: 45;
+    max-width: 400px;
     position: absolute;
     bottom: 0;
     top: 170px;
-    right: 40px;
+    right: 20px;
 }
 
 .images img{
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
 }
 
 .photo {
@@ -135,12 +136,9 @@ span{
 }
 
 .gallery-icon {
-    margin: 50px auto;
-    width: 10px 0px;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    width: 90%;
+    height: auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -170,24 +168,20 @@ span{
     padding: 10px 20px;
 }
 
-/* Gaya kontainer artikel */
 .articles {
     display: flex;
-    flex-wrap: wrap; /* Mengatur wrap item artikel jika tidak cukup lebar */
-    justify-content: space-around; /* Posisikan artikel secara merata di sepanjang kontainer */
-    align-items: center;
+    flex-wrap: wrap; 
+    justify-content: space-around;
 }
 
 .article-container {
-    border-bottom: 1px solid #8785A2; /* Tambahkan garis bawah */
-    padding-bottom: 20px; /* Berikan jarak di bawah setiap artikel */
+    border-bottom: 1px solid #8785A2; 
+    padding-bottom: 20px; 
     padding-top: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    width: 90%;
+    margin-bottom: 30px;
 }
 
-/* Gaya tautan artikel */
 .article-link {
     text-decoration: none;
     color: inherit;
@@ -195,29 +189,18 @@ span{
     width: 100%;
 }
 
-/* Gaya konten artikel */
 .article-content {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-/* Gaya gambar artikel */
 .article-image {
     width: 50%;
-    max-width: 350px;
-    margin-right: 50px;
+    max-width: 400px;
+    margin:0 50px 10px 0;
 }
 
-/* Gaya judul artikel */
-.article-title {
-    margin: o;
-    font-size: 24px;
-    color: #333;
-    flex: 1;
-}
-
-/* Gaya deskripsi artikel */
 .article-description {
     margin: 0;
     color: #666;
@@ -241,29 +224,28 @@ span{
 
 .img img{
     width: 600px;
-    margin: 10px;
+    margin: 10px 0;
     height: 600px;
     object-fit: cover;
 }
 
 .me h1{
     font-size: 50px;
-    color: black;
     margin-bottom: 10px;
     margin-top: 20%;
 }
 
 .me p1 {
-    font-size: 16px; /* Ukuran font paragraf */
-    color: #666; /* Warna teks paragraf */
-    line-height: 1.6; /* Tinggi baris */
+    font-size: 16px; 
+    color: #666;
+    line-height: 1.6; 
     margin-bottom: 10px; 
 }
 
 .me p2 {
-    font-size: 16px; /* Ukuran font paragraf */
-    color: #666; /* Warna teks paragraf */
-    line-height: 1.6; /* Tinggi baris */
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6; 
     margin-bottom: 10px; 
 }
 
@@ -301,4 +283,64 @@ span{
     width: 100%;
     padding: 20px 0px;
     margin-top: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .logo {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .menu {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav .menu ul {
+        text-align: center;
+        margin: auto;
+        line-height: 60px;
+    }
+
+    nav .menu ul li {
+        display: inline-block;
+        float: none;
+    }
+
+    .images {
+        position: static;
+        width: auto;
+        margin: 20px auto;
+    }
+    
+    .detel {
+        margin-top: 20px;
+    }
+
+    .gallery-icon img {
+        width: 40%;
+        margin: 10px 10px;
+    }
+    
+    .articles {
+        justify-content: flex-start; 
+    }
+    
+    .article-container {
+        width: 100%;
+    }
+    
+    .me h1 {
+        margin-top: 5%;
+    }
+
+    .footer-section {
+        width: calc(100%/3);
+    }
+
 }
